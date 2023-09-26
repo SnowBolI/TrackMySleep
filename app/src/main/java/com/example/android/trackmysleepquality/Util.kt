@@ -91,7 +91,7 @@ fun formatNights(nights: List<SleepNight>, resources: Resources): Spanned {
                 // Hours
                 append("\t ${it.endTimeMilli.minus(it.startTimeMilli) / 1000 / 60 / 60}:")
                 // Minutes
-                append("${it.endTimeMilli.minus(it.startTimeMilli) / 1000 / 60}:")
+                append("${it.endTimeMilli.minus(it.startTimeMilli) / 1000 % 60}:")
                 // Seconds
                 append("${it.endTimeMilli.minus(it.startTimeMilli) / 1000 % 60  }<br><br>")
             }
